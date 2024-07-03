@@ -15,7 +15,7 @@ class GreetingResourceTest {
 
     @Test
     void testHelloEndpoint() {
-            LOGGER.info("Creating Quarkus app for testing testHelloEndpoint");
+            LOGGER.info("Creating Quarkus app for testing common testHelloEndpoint");
         given()
           .when().get("/hello")
           .then()
@@ -25,6 +25,7 @@ class GreetingResourceTest {
 
     @Test
     public void testHelloInfinispanEndpoint() {
+        LOGGER.info("Creating Quarkus app for testing the testHelloInfinispanEndpoint ********** ");
         given()
                 .contentType(ContentType.JSON)
                 .body("{\"name\":\"Infinispan Client\",\"message\":\"Hello World, Infinispan is up!\"}")
